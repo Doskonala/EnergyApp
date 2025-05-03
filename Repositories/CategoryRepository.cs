@@ -16,20 +16,20 @@ public class CategoryRepository : ICategoryRepository
 
     public async Task<List<Category>> GetAllAsync()
     {
-        return await _solarContext.Categories.ToListAsync();
-        //throw new NotImplementedException();
+        //return await _solarContext.Categories.ToListAsync();
+        throw new NotImplementedException();
     }
 
     public async Task<Category> FindAsync(int id)
     {
-        //throw new NotImplementedException();
-        return await _solarContext.Categories.FindAsync(id);
+        throw new NotImplementedException();
+        //return await _solarContext.Categories.FindAsync(id);
     }
 
     public async Task<Category> FindByTitleAsync(string title)
     {
-        //throw new NotImplementedException();
-        return await _solarContext.Categories.FirstOrDefaultAsync(c => c.Title == title);
+        throw new NotImplementedException();
+        //return await _solarContext.Categories.FirstOrDefaultAsync(c => c.Title == title);
     }
 
     public async Task AddAsync(Category category)
@@ -40,15 +40,15 @@ public class CategoryRepository : ICategoryRepository
 
     public async Task UpdateAsync(Category category)
     {
-        var dbCategory = await _solarContext.Categories.FindAsync(category.Id);
-        if (dbCategory == null)
-        {
-            throw new NullReferenceException();
-        }
+        //var dbCategory = await _solarContext.Categories.FindAsync(category.Id);
+        //if (dbCategory == null)
+        //{
+        //    throw new NullReferenceException();
+        //}
 
-        dbCategory.Title = category.Title;
+        //dbCategory.Title = category.Title;
 
-        await _solarContext.SaveChangesAsync();
+        //await _solarContext.SaveChangesAsync();
     }
 
     public async Task DeleteAsync(int id)
